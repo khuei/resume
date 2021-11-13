@@ -2,12 +2,12 @@
 
 CC = xelatex
 SRC_DIR = $(shell pwd)
-RESUME_DIR = resume
-RESUME_SRCS = $(shell find $(RESUME_DIR) -name '*.tex')
+CV_DIR = cv
+CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
 
 all: $(foreach x, resume, $x.pdf)
 
-resume.pdf: $(SRC_DIR)/resume.tex $(RESUME_SRCS)
+resume.pdf: $(SRC_DIR)/resume.tex $(CV_SRCS)
 	$(CC) -output-directory=$(SRC_DIR) $<
 
 clean:
