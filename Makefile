@@ -13,5 +13,4 @@ resume.pdf: $(SRC_DIR)/resume.tex $(CV_SRCS)
 clean:
 	rm -rf $(SRC_DIR)/*.pdf
 
-.PHONY: build
-
+.PHONY: all resume.pdf clean
